@@ -121,3 +121,7 @@ def fire_webhook(event_type, payload):
             requests.post(url, json={"event": event_type, "data": payload})
         except Exception as e:
             print(f"[WEBHOOK FAIL] {url} - {e}")
+@app.route("/")
+def home():
+    return "Silent Synth API is live!"
+
